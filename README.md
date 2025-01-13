@@ -1,16 +1,20 @@
-# Initialize a new repository
-git init
+# Meditation Timer
 
-# Add your files
-git add .
+A customizable meditation timer with chakra-colored slider and note-taking functionality.
 
-# Set up your identity (as shown above)
+## Features
+- Adjustable meditation duration (5-120 minutes)
+- Chakra-colored progress slider
+- Note-taking section for meditation insights
+- Clean, minimalist design with soothing color scheme
 
-# Make your first commit
-git commit -m "Initial commit with meditation timer"
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
 
-# Add your GitHub repository as remote
-git remote add origin YOUR_GITHUB_REPO_URL
-
-# Push your code
-git push -u origin main
+## How to Use
+1. Adjust the timer using the chakra-colored slider
+2. Click "Start" to begin meditation
+3. Use the pause function if needed
+4. Add notes about your meditation experience
