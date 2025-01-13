@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitting Meditation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sitting Meditation</h1>
+        
+        <!-- Timer Section -->
+        <div class="timer-section">
+            <div class="timer-display">
+                <span id="minutes">00</span>
+                <div class="timer-separator">
+                    <svg class="infinity-symbol" viewBox="0 0 100 50" width="400" height="200">
+                        <path d="M30,25 C30,15 40,15 50,25 C60,35 70,35 70,25 C70,15 60,15 50,25 C40,35 30,35 30,25" 
+                              fill="none" 
+                              stroke="rgba(255, 215, 0, 0.8)" 
+                              stroke-width="3"/>
+                    </svg>
+                    <span>:</span>
+                </div>
+                <span id="seconds">00</span>
+            </div>
+            <div class="timer-controls">
+                <div class="slider-container">
+                    <input type="range" 
+                           id="timeSlider" 
+                           min="5" 
+                           max="120" 
+                           step="5" 
+                           value="5">
+                    <div class="time-labels">
+                        <span>5 min</span>
+                        <span>120 min</span>
+                    </div>
+                </div>
+                <button id="startPauseButton">Start</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="notes-section">
+            <h2>Notes</h2>
+            <textarea id="meditationNotes" 
+                      placeholder="Record your thoughts and experiences here..."
+                      rows="5"></textarea>
+            <button onclick="saveNotes()">Save Notes</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

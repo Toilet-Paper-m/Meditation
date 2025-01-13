@@ -1,0 +1,252 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Raleway:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    /* Soft sage green background */
+    background-color: #e8f3d6;
+    color: #5c6e58;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(237, 234, 222, 0.97);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #3a4d39;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.timer-section {
+    text-align: center;
+    margin: 2rem auto 3rem;
+    padding: 3rem 2rem;
+    width: 400px;
+    position: relative;
+    background-color: rgba(242, 239, 228, 0.85);
+    border-radius: 15px;
+}
+
+.timer-display {
+    font-size: 4.5rem;
+    margin: 1.5rem 0;
+    font-weight: 300;
+    color: #3a4d39;
+    position: relative;
+    z-index: 2;
+}
+
+.timer-controls {
+    position: relative;
+    z-index: 2;
+}
+
+/* Update existing slider styles to fit within the shape */
+.slider-container {
+    width: 70%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.time-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    color: #3a4d39;
+    font-size: 0.9rem;
+}
+
+/* Styling for the range input */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right,
+        #ff0000 0%,    /* Root Chakra - Red */
+        #ff7f00 17%,   /* Sacral Chakra - Orange */
+        #ffff00 34%,   /* Solar Plexus - Yellow */
+        #00ff00 51%,   /* Heart Chakra - Green */
+        #0000ff 68%,   /* Throat Chakra - Blue */
+        #4b0082 85%,   /* Third Eye - Indigo */
+        #9400d3 100%   /* Crown Chakra - Violet */
+    );
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #739072;
+    cursor: pointer;
+    margin-top: -6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Firefox styles */
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right,
+        #ff0000 0%,    /* Root Chakra - Red */
+        #ff7f00 17%,   /* Sacral Chakra - Orange */
+        #ffff00 34%,   /* Solar Plexus - Yellow */
+        #00ff00 51%,   /* Heart Chakra - Green */
+        #0000ff 68%,   /* Throat Chakra - Blue */
+        #4b0082 85%,   /* Third Eye - Indigo */
+        #9400d3 100%   /* Crown Chakra - Violet */
+    );
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #739072;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Remove the transform properties we had before */
+input[type="range"] {
+    transform: none;
+    transform-origin: unset;
+}
+
+/* Update the start/pause button styles */
+#startPauseButton {
+    min-width: 100px;
+}
+
+#startPauseButton.active {
+    background-color: #c17676;
+}
+
+#startPauseButton.active:hover {
+    background-color: #a85757;
+}
+
+/* Add back the missing styles */
+.timer-controls button {
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #739072;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+}
+
+.timer-controls button:hover {
+    background-color: #3a4d39;
+    transform: translateY(-2px);
+}
+
+.notes-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: rgba(242, 239, 228, 0.85);
+    border-radius: 15px;
+}
+
+textarea {
+    width: 100%;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    border: 1px solid #739072;
+    border-radius: 15px;
+    resize: vertical;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    color: #3a4d39;
+    background-color: rgba(237, 234, 222, 0.97);
+    min-height: 150px;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3a4d39;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #739072;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+}
+
+button:hover {
+    background-color: #3a4d39;
+    transform: translateY(-2px);
+}
+
+/* Add these new styles */
+.timer-separator {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+
+.infinity-symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%) scale(0.25);
+    transform-origin: center;
+    z-index: 1;
+}
+
+.timer-separator span {
+    position: relative;
+    z-index: 2;
+} 
